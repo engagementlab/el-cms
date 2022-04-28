@@ -1,0 +1,28 @@
+{
+  "name": "keystone-app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "keystone dev",
+    "start": "keystone start",
+    "build": "keystone build",
+    "postinstall": "keystone postinstall"
+  },
+  "dependencies": {
+    "@cloudinary/base": "^1.0.0-beta.4",
+    "@cloudinary/react": "^1.1.0",
+    "@cloudinary/url-gen": "^1.6.0",
+    "@emotion/core": "10.3.1",
+    "@emotion/css": "^11.7.1",
+    "@k6-contrib/fields-azure": "^1.1.0",
+    "@keystone-6/auth": "^1.0.1",
+    "@keystone-6/core": "^1.0.1",
+    "@keystone-6/fields-document": "^1.0.1",
+    "cloudinary": "^1.29.1",
+    "express-session": "^1.17.2",
+    "typescript": "^4.5.4"
+  },
+  "engines": {
+    "node": "^14.15 || ^16.13"
+  }
+}
