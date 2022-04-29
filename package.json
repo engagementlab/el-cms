@@ -6,7 +6,8 @@
     "dev": "keystone dev",
     "start": "node ./node_modules/@keystone-6/core/bin/cli.js start",
     "build": "keystone build",
-    "postinstall": "keystone postinstall"
+    "postinstall": "keystone postinstall",
+    "test": "ls"
   },
   "dependencies": {
     "@cloudinary/base": "^1.0.0-beta.4",
