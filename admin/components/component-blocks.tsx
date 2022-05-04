@@ -1,4 +1,4 @@
- /* eslint-disable @next/next/no-img-element */
+/* eslint-disable @next/next/no-img-element */
 import React, { ComponentType, Fragment, useState } from 'react';
 import { NotEditable, component, fields } from '@keystone-6/fields-document/component-blocks';
 import { FormField, HydratedRelationshipData } from '@keystone-6/fields-document/dist/declarations/src/DocumentEditor/component-blocks/api';
@@ -6,7 +6,7 @@ import { FormField, HydratedRelationshipData } from '@keystone-6/fields-document
 import { FieldContainer, FieldLabel, TextArea } from '@keystone-ui/fields';
 import { css as emCss } from '@emotion/css';
 import Select, { GroupBase, OptionProps } from 'react-select'
-// const videoData = require('../../videoData');
+const videoData = require('../../videoData');
 
 
 interface RelatedVideo {
@@ -102,7 +102,7 @@ function videoSelect({
             id='video'
             isClearable
             autoFocus={autoFocus}
-            // options={videoData}
+            options={videoData}
             isDisabled={onChange === undefined}
             onChange={event => {
               onChange(event as RelatedVideo)

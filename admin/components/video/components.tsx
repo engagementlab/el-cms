@@ -34,7 +34,7 @@ import {
   css as emCss
 } from '@emotion/css';
 // const _ = require('underscore');
-// const videoData = require('../../../videoData');
+const videoData = require('../../../videoData');
 
 interface RelatedVideo {
   label: string;
@@ -209,7 +209,7 @@ export const Field = ({
               id={field.path}
               isClearable
               autoFocus={autoFocus}
-              // options={videoData}
+              options={videoData}
               isDisabled={onChange === undefined}
               onChange={(newValue, meta) => {setCurrentValue(newValue as RelatedVideo)}}
               value={currentValue}

@@ -1,17 +1,41 @@
-export { default as AboutImage } from './lists/aboutImage';
-export { default as About } from './lists/about';
-export { default as BigPictureImage } from './lists/bigPictureImage';
-export { default as BigPicture } from './lists/bigPicture';
-export { default as Community } from './lists/community';
-export { default as EventImage } from './lists/eventImage';
-export { default as Event } from './lists/event';
-export { default as Filter } from './lists/filter';
-export { default as HomeSlide } from './lists/homeSlide';
-export { default as Home } from './lists/home';
-export { default as MediaImage } from './lists/mediaImage';
-export { default as MediaItem } from './lists/media';
-export { default as NewsImage } from './lists/newsImage';
-export { default as NewsItem } from './lists/newsItem';
-export { default as Person } from './lists/person';
-export { default as StudioImage } from './lists/studioImage';
-export { default as Studio } from './lists/studio';
+import { Lists } from '.keystone/types';
+
+import AboutImage from './lists/aboutImage';
+import About from './lists/about';
+import BigPictureImage from './lists/bigPictureImage';
+import BigPicture from './lists/bigPicture';
+import Community from './lists/community';
+import EventImage from './lists/eventImage';
+import Event from './lists/event';
+import Filter from './lists/filter';
+import HomeSlide from './lists/homeSlide';
+import Home from './lists/home';    
+import MediaImage from './lists/mediaImage';
+import MediaItem from './lists/media';
+import NewsImage from './lists/newsImage';
+import NewsItem from './lists/newsItem';
+import Person from './lists/person';
+import StudioImage from './lists/studioImage';
+import Studio from './lists/studio';
+
+const lists: Lists = {
+    AboutImage,
+    About,
+    BigPictureImage,
+    BigPicture,
+    Community,
+    EventImage,
+    Event,
+    Filter,
+    HomeSlide,
+    Home,
+    MediaImage,
+    MediaItem,
+    NewsImage,
+    NewsItem,
+    Person,
+    StudioImage,
+    Studio,
+};
+
+export default lists;
