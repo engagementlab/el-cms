@@ -1,5 +1,11 @@
-import { config } from '@keystone-6/core';
-import { BaseKeystoneTypeInfo, DatabaseConfig, KeystoneConfig } from '@keystone-6/core/types';
+import {
+  config
+} from '@keystone-6/core';
+import {
+  BaseKeystoneTypeInfo,
+  DatabaseConfig,
+  KeystoneConfig
+} from '@keystone-6/core/types';
 
 import 'dotenv/config';
 
@@ -18,23 +24,26 @@ declare module 'express-serve-static-core' {
 }
 
 // Fallback
-let dbConfig: DatabaseConfig<BaseKeystoneTypeInfo> = {
-  provider: 'sqlite',
-  url: 'file:./app.db',
-};
+let dbConfig: DatabaseConfig < BaseKeystoneTypeInfo > ;
 if (process.env.DB_URI) {
+  console.log(`Using process.env.DB_URI`)
   dbConfig = {
     provider: 'postgresql',
     url: process.env.DB_URI,
   };
-}
+} else {
+  dbConfig = {
+    provider: 'sqlite',
+    url: 'file:./app.db',
+  }
+};
 let ksConfig: KeystoneConfig = {
   db: dbConfig,
   experimental: {
     generateNextGraphqlAPI: true,
     generateNodeAPI: true,
   },
-  lists,    
+  lists,
   server: {
     port: 8080,
   },
