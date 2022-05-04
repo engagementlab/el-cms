@@ -1,5 +1,5 @@
 import { config } from '@keystone-6/core';
-import { BaseKeystoneTypeInfo, DatabaseConfig } from '@keystone-6/core/types';
+import { BaseKeystoneTypeInfo, DatabaseConfig, KeystoneConfig } from '@keystone-6/core/types';
 
 import 'dotenv/config';
 
@@ -28,13 +28,17 @@ if (process.env.DB_URI) {
     url: process.env.DB_URI,
   };
 }
-let ksConfig = {
+let ksConfig: KeystoneConfig = {
   db: dbConfig,
   experimental: {
     generateNextGraphqlAPI: true,
     generateNodeAPI: true,
   },
-  lists,
+  lists,    
+  server: {
+    port: 8080,
+  },
+
 };
 
 export default (() => {

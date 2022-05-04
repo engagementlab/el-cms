@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "keystone dev",
-    "start": "node vimeo.js && node ./node_modules/@keystone-6/core/bin/cli.js start",
+    "start": "node ./node_modules/@keystone-6/core/bin/cli.js start",
     "build": "keystone build",
     "postinstall": "keystone postinstall --fix"
   },
