@@ -6,7 +6,7 @@
     "dev": "keystone dev",
     "start": "node vimeo.js && node ./node_modules/@keystone-6/core/bin/cli.js start",
     "build": "keystone build",
-    "postinstall": "keystone postinstall"
+    "postinstall": "keystone postinstall --fix"
   },
   "dependencies": {
     "@keystone-6/auth": "^1.0.1",
